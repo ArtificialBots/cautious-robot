@@ -1,0 +1,26 @@
+import React, { useState } from 'react';
+
+const OutputDisplay = () => {
+  const [output, setOutput] = useState('');
+
+  // simulate running code and setting output
+  const runCode = (code) => {
+    try {
+      const output = eval(code); // Be careful with eval due to security risks
+      setOutput(output);
+    } catch (error) {
+      setOutput(error.toString());
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={() => runCode('console.log("Hello World")')}>
+        Run Code
+      </button>
+      <div>{output}</div>
+    </div>
+  );
+};
+
+export default OutputDisplay;
