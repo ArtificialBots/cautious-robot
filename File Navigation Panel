@@ -1,0 +1,23 @@
+import React, { useState } from 'react';
+
+const files = [
+  { name: 'file1.js', content: '' },
+  { name: 'file2.js', content: '' },
+  // add as many files as you need
+];
+
+const FileNavigation = () => {
+  const [activeFile, setActiveFile] = useState(files[0]);
+
+  return (
+    <div>
+      {files.map((file, index) => (
+        <div key={index} onClick={() => setActiveFile(file)}>
+          {file.name}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default FileNavigation;
