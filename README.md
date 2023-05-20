@@ -9,6 +9,7 @@ Output Display Panel
 
 This panel would display the output of your code. For simplicity, you could just use a console.log and display the result in this panel. But remember, evaluating arbitrary JavaScript code in the browser can lead to security risks, so use this carefully and consider using a JavaScript sandboxing library.
 
+HTML Uploader
 To allow users to upload HTML files and display the contents as a webpage within your React app, you can use the FileReader API to read the contents of the uploaded file, and then use dangerouslySetInnerHTML to inject the HTML content into your component.
 
 Keep in mind that using dangerouslySetInnerHTML can expose your application to cross-site scripting (XSS) attacks if the HTML content is not properly sanitized. Ensure that you trust the source of the HTML or use a library to sanitize the HTML content.
